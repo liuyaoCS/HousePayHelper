@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.ly.housepay.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/housePriceTxt"
+        android:text="房屋总价(万)"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/housePrice"
+        android:layout_toRightOf="@id/housePriceTxt"
+        android:layout_marginLeft="10dp"
+        android:text="360"
+        android:hint="房屋总价(万)"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/evaluationTxt"
+        android:layout_below="@id/housePrice"
+        android:text="房价评估(折)"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/evaluation"
+        android:layout_toRightOf="@id/evaluationTxt"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/housePrice"
+        android:text="0.9"
+        android:hint="房价评估(折)"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chargeTxt"
+        android:layout_below="@id/evaluation"
+        android:text="其他费点(个)"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/charge"
+        android:layout_toRightOf="@id/chargeTxt"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/evaluation"
+        android:text="3.7"
+        android:hint="其他费点(个)"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/compute"
+        android:layout_below="@id/charge"
+        android:text="计算"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ret"
+        android:lines="4"
+        android:layout_below="@+id/compute"
+        />
+</RelativeLayout>
