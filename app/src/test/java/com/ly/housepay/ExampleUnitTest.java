@@ -1,5 +1,8 @@
 package com.ly.housepay;
 
+import android.provider.Settings;
+import android.util.Log;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,6 +13,9 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+        //assertEquals(4, 2 + 2);
+        String a="-1.5";
+        double ret=Double.parseDouble(a);
+        System.out.println(ret);
     }
 }
