@@ -24,7 +24,7 @@
                 android:inputType="numberDecimal"
                 android:id="@+id/housePrice"
                 android:layout_marginLeft="10dp"
-                android:text="352"
+                android:text="400"
                 android:hint="房屋总价(万)"/>
         </LinearLayout>
 
@@ -55,7 +55,7 @@
                 android:inputType="numberDecimal"
                 android:id="@+id/evaluationPrice"
                 android:layout_marginLeft="10dp"
-                android:text="334"
+                android:text="0"
                 android:hint="房评价格(万)"/>
         </LinearLayout>
         <LinearLayout
@@ -72,8 +72,20 @@
                 android:inputType="numberDecimal"
                 android:id="@+id/bankInterest"
                 android:layout_marginLeft="10dp"
-                android:text="4.165"
+                android:text="4.41"
                 android:hint="银行利率(点)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贷款年限(年)"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:id="@+id/loanYears"
+                android:layout_marginLeft="10dp"
+                android:text="25"
+                android:hint="贷款年限(年)"/>
         </LinearLayout>
 
         <LinearLayout
@@ -107,7 +119,7 @@
                 android:inputType="numberDecimal"
                 android:id="@+id/taxcharge"
                 android:layout_marginLeft="10dp"
-                android:text="2"
+                android:text="1"
                 android:hint="税契费点(个)"/>
         </LinearLayout>
 
@@ -124,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/other"
                 android:layout_marginLeft="10dp"
-                android:text="-1.5"
+                android:text="0"
                 android:hint="其他费用(万)"/>
         </LinearLayout>
 

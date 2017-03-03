@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button house,creditLoan;
+    Button house,creditLoan,board,my,decoration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         creditLoan= (Button) findViewById(R.id.creditLoan);
         house.setOnClickListener(this);
         creditLoan.setOnClickListener(this);
+        board= (Button) findViewById(R.id.board);
+        board.setOnClickListener(this);
+        my= (Button) findViewById(R.id.my);
+        my.setOnClickListener(this);
+        decoration= (Button) findViewById(R.id.decoration);
+        decoration.setOnClickListener(this);
     }
 
 
@@ -31,6 +37,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.creditLoan:
                 startActivity(new Intent(MainActivity.this,CreditLoanActivity.class));
+                break;
+            case R.id.board:
+                startActivity(new Intent(MainActivity.this,BoardActivity.class));
+                break;
+            case R.id.my:
+                startActivity(new Intent(MainActivity.this,MyActivity.class));
+                break;
+            case R.id.decoration:
+                startActivity(new Intent(MainActivity.this,DecorationActivity.class));
                 break;
             default:
                 break;

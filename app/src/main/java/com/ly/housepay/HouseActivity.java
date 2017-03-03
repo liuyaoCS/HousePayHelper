@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class HouseActivity extends AppCompatActivity {
-    EditText housePrice,houseEvaluation,evaluationPrice,bankInterest,charge,taxcharge,others;
+    EditText housePrice,houseEvaluation,evaluationPrice,bankInterest,years,charge,taxcharge,others;
     Button compute;
     TextView result;
     @Override
@@ -22,6 +22,7 @@ public class HouseActivity extends AppCompatActivity {
         houseEvaluation= (EditText) findViewById(R.id.evaluation);
         evaluationPrice= (EditText) findViewById(R.id.evaluationPrice);
         bankInterest= (EditText) findViewById(R.id.bankInterest);
+        years= (EditText) findViewById(R.id.loanYears);
         charge= (EditText) findViewById(R.id.charge);
         taxcharge= (EditText) findViewById(R.id.taxcharge);
         others=(EditText) findViewById(R.id.other);
@@ -38,6 +39,7 @@ public class HouseActivity extends AppCompatActivity {
                 double ch=Double.parseDouble(charge.getText().toString());//中介费点
                 double tch=Double.parseDouble(taxcharge.getText().toString());//税费点
                 double other=Double.parseDouble(others.getText().toString());//其他费用
+                int loadyears=Integer.parseInt(years.getText().toString());
 
                 double dy=bi/100;
                 double dm=dy/12; //每月贷款利率
@@ -47,7 +49,7 @@ public class HouseActivity extends AppCompatActivity {
                     hep=hep*10000;
                 }
                 double sum=hep*0.65;//可贷款总额
-                int months=360;
+                int months=loadyears*12;//可贷款时间
                 double downPay=hp*10000-sum+hp*10000*ch/100+hep*tch/100+other*10000;//总首付
                 double sellerGet=hp*10000-sum;
                 double govGet=hep*tch/100;

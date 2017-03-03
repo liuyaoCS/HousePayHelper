@@ -15,5 +15,22 @@
         android:id="@+id/creditLoan"
         android:layout_below="@id/house"
         />
-
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="房地产论坛"
+        android:id="@+id/board"
+        android:layout_below="@id/creditLoan"
+        />
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="南湖渠西里"
+        android:id="@+id/my"
+        android:layout_below="@id/board"
+        />
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="装修资源"
+        android:id="@+id/decoration"
+        android:layout_below="@id/my"
+        />
 </RelativeLayout>
