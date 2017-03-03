@@ -1,36 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.ly.housepay.MainActivity">
-    <Button android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="房费"
-        android:id="@+id/house"
-        />
-    <Button android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="信用贷"
-        android:id="@+id/creditLoan"
-        android:layout_below="@id/house"
-        />
-    <Button android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="房地产论坛"
-        android:id="@+id/board"
-        android:layout_below="@id/creditLoan"
-        />
-    <Button android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="南湖渠西里"
-        android:id="@+id/my"
-        android:layout_below="@id/board"
-        />
-    <Button android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="装修资源"
-        android:id="@+id/decoration"
-        android:layout_below="@id/my"
-        />
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="54dp">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/menu_home_bg"
+        android:weightSum="4"
+        android:baselineAligned="true">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dip"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/forum_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@mipmap/menu_forum_current"
+                android:gravity="center"
+                android:text="论坛"
+                android:textColor="@color/menu_text_bg" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dip"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@mipmap/menu_decoration"
+                android:gravity="center"
+                android:text="资产"
+                android:textColor="@color/menu_text_bg" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dip"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/decoration_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@mipmap/menu_price"
+                android:gravity="center"
+                android:text="装修"
+                android:textColor="@color/menu_text_bg" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dip"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tool_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@mipmap/menu_price"
+                android:gravity="center"
+                android:text="工具"
+                android:textColor="@color/menu_text_bg" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

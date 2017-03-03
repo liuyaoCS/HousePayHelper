@@ -4,7 +4,7 @@
     android:id="@+id/activity_credit_loan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ly.housepay.CreditLoanActivity">
+    tools:context="com.ly.housepay.activity.CreditLoanActivity">
     <!--credit loan-->
     <TextView
         android:layout_width="match_parent"

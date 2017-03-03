@@ -1,4 +1,4 @@
-package com.ly.housepay;
+package com.ly.housepay.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.ly.housepay.R;
 
 public class HouseActivity extends AppCompatActivity {
     EditText housePrice,houseEvaluation,evaluationPrice,bankInterest,years,charge,taxcharge,others;

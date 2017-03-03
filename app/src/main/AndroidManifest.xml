@@ -11,18 +11,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HouseActivity" />
-        <activity android:name=".CreditLoanActivity" />
-        <activity android:name=".BoardActivity" />
-        <activity android:name=".MyActivity" />
-        <activity android:name=".DecorationActivity"></activity>
+        <activity android:name=".activity.HouseActivity" />
+        <activity android:name=".activity.CreditLoanActivity" />
     </application>
 
 </manifest>

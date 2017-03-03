@@ -4,7 +4,7 @@
     android:id="@+id/activity_house"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ly.housepay.HouseActivity">
+    tools:context="com.ly.housepay.activity.HouseActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
