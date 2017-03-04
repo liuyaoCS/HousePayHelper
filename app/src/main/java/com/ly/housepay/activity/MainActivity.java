@@ -164,6 +164,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     System.exit(0);
                 }
             }
+        }else{
+            if ((System.currentTimeMillis() - mExitTime) > 2000) {
+                Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+                mExitTime = System.currentTimeMillis();
+            } else {
+                System.exit(0);
+            }
         }
     }
 
