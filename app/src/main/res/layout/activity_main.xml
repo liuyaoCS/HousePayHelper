@@ -9,14 +9,14 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="54dp">
+        android:layout_marginBottom="64dp">
 
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="64dp"
         android:layout_alignParentBottom="true"
         android:background="@color/menu_home_bg"
         android:weightSum="4"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:drawableTop="@mipmap/menu_forum_current"
+                android:drawableTop="@mipmap/foot_forum_pressed"
                 android:gravity="center"
                 android:text="论坛"
                 android:textColor="@color/menu_text_bg" />
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:drawableTop="@mipmap/menu_decoration"
+                android:drawableTop="@mipmap/foot_decoration_normal"
                 android:gravity="center"
                 android:text="资产"
                 android:textColor="@color/menu_text_bg" />
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:drawableTop="@mipmap/menu_price"
+                android:drawableTop="@mipmap/foot_price_normal"
                 android:gravity="center"
                 android:text="装修"
                 android:textColor="@color/menu_text_bg" />
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:drawableTop="@mipmap/menu_price"
+                android:drawableTop="@mipmap/foot_tool_normal"
                 android:gravity="center"
                 android:text="工具"
                 android:textColor="@color/menu_text_bg" />

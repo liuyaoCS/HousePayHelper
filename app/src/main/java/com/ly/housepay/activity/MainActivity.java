@@ -16,6 +16,7 @@ import com.ly.housepay.fragment.DecorationFragment;
 import com.ly.housepay.fragment.ForumFragment;
 import com.ly.housepay.fragment.PriceFragment;
 import com.ly.housepay.fragment.ToolFragment;
+import com.ly.housepay.fragment.base.BaseFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -89,19 +90,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @SuppressLint("NewApi")
     private void clearSelection() {
         forum_text.setTextColor(menuTextBgColor);
-        Drawable drawableForum = rs.getDrawable(R.mipmap.menu_forum);
+        Drawable drawableForum = rs.getDrawable(R.mipmap.foot_forum_normal);
         forum_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableForum, null, null);
 
-        price_text.setTextColor(menuTextBgColor);
-        Drawable drawablePrice = rs.getDrawable(R.mipmap.menu_decoration);
-        price_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawablePrice, null, null);
 
         decoration_text.setTextColor(menuTextBgColor);
-        Drawable drawableDecoration = rs.getDrawable(R.mipmap.menu_price);
+        Drawable drawableDecoration = rs.getDrawable(R.mipmap.foot_decoration_normal);
         decoration_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableDecoration, null, null);
 
+        price_text.setTextColor(menuTextBgColor);
+        Drawable drawablePrice = rs.getDrawable(R.mipmap.foot_price_normal);
+        price_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawablePrice, null, null);
+
         tool_text.setTextColor(menuTextBgColor);
-        Drawable drawableTool = rs.getDrawable(R.mipmap.menu_price);
+        Drawable drawableTool = rs.getDrawable(R.mipmap.foot_tool_normal);
         tool_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableTool, null, null);
 
     }
@@ -123,42 +125,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.forum_text:
                 forum_text.setTextColor(menuTextBgCurrentColor);
-                Drawable drawableForum = rs.getDrawable(R.mipmap.menu_forum_current);
+                Drawable drawableForum = rs.getDrawable(R.mipmap.foot_forum_pressed);
                 forum_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableForum, null, null);
                 switchFragment("forumFragment");
                 break;
-            case R.id.price_text:
-                price_text.setTextColor(menuTextBgCurrentColor);
-                Drawable drawablePrice = rs.getDrawable(R.mipmap.menu_decoration_current);
-                price_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawablePrice, null, null);
-                switchFragment("priceFragment");
-                break;
             case R.id.decoration_text:
                 decoration_text.setTextColor(menuTextBgCurrentColor);
-                Drawable drawableDecoration = rs.getDrawable(R.mipmap.menu_price_current);
+                Drawable drawableDecoration = rs.getDrawable(R.mipmap.foot_decoration_pressed);
                 decoration_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableDecoration, null, null);
                 switchFragment("decorationFragment");
                 break;
+            case R.id.price_text:
+                price_text.setTextColor(menuTextBgCurrentColor);
+                Drawable drawablePrice = rs.getDrawable(R.mipmap.foot_price_pressed);
+                price_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawablePrice, null, null);
+                switchFragment("priceFragment");
+                break;
             case R.id.tool_text:
                 tool_text.setTextColor(menuTextBgCurrentColor);
-                Drawable drawableTool = rs.getDrawable(R.mipmap.menu_price_current);
-                decoration_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableTool, null, null);
+                Drawable drawableTool = rs.getDrawable(R.mipmap.foot_tool_pressed);
+                tool_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableTool, null, null);
                 switchFragment("toolFragment");
                 break;
         }
     }
 
 
-
     private long mExitTime = 0;
-
     @Override
     public void onBackPressed() {
-        if ((System.currentTimeMillis() - mExitTime) > 2000) {
-            Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
-            mExitTime = System.currentTimeMillis();
-        } else {
-            System.exit(0);
+        if(mCurrentFragment!=null && mCurrentFragment!=toolFragment){
+            if(!((BaseFragment)mCurrentFragment).onBackPressed()){
+                //super.onBackPressed();
+                if ((System.currentTimeMillis() - mExitTime) > 2000) {
+                    Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+                    mExitTime = System.currentTimeMillis();
+                } else {
+                    System.exit(0);
+                }
+            }
         }
     }
 

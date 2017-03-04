@@ -45,4 +45,12 @@ public  abstract  class BaseFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         web.loadUrl(getUrl());
     }
+    public boolean onBackPressed(){
+        if(web.canGoBack()){
+            web.goBack();
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
