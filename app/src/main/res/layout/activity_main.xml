@@ -52,9 +52,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:drawableTop="@mipmap/foot_decoration_normal"
+                android:drawableTop="@mipmap/foot_price_normal"
                 android:gravity="center"
-                android:text="资产"
+                android:text="小区"
                 android:textColor="@color/menu_text_bg" />
         </FrameLayout>
 
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:drawableTop="@mipmap/foot_price_normal"
+                android:drawableTop="@mipmap/foot_decoration_normal"
                 android:gravity="center"
                 android:text="装修"
                 android:textColor="@color/menu_text_bg" />

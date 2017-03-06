@@ -93,14 +93,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Drawable drawableForum = rs.getDrawable(R.mipmap.foot_forum_normal);
         forum_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableForum, null, null);
 
+        price_text.setTextColor(menuTextBgColor);
+        Drawable drawablePrice = rs.getDrawable(R.mipmap.foot_price_normal);
+        price_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawablePrice, null, null);
 
         decoration_text.setTextColor(menuTextBgColor);
         Drawable drawableDecoration = rs.getDrawable(R.mipmap.foot_decoration_normal);
         decoration_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableDecoration, null, null);
 
-        price_text.setTextColor(menuTextBgColor);
-        Drawable drawablePrice = rs.getDrawable(R.mipmap.foot_price_normal);
-        price_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawablePrice, null, null);
 
         tool_text.setTextColor(menuTextBgColor);
         Drawable drawableTool = rs.getDrawable(R.mipmap.foot_tool_normal);
@@ -129,17 +129,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 forum_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableForum, null, null);
                 switchFragment("forumFragment");
                 break;
-            case R.id.decoration_text:
-                decoration_text.setTextColor(menuTextBgCurrentColor);
-                Drawable drawableDecoration = rs.getDrawable(R.mipmap.foot_decoration_pressed);
-                decoration_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableDecoration, null, null);
-                switchFragment("decorationFragment");
-                break;
             case R.id.price_text:
                 price_text.setTextColor(menuTextBgCurrentColor);
                 Drawable drawablePrice = rs.getDrawable(R.mipmap.foot_price_pressed);
                 price_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawablePrice, null, null);
                 switchFragment("priceFragment");
+                break;
+            case R.id.decoration_text:
+                decoration_text.setTextColor(menuTextBgCurrentColor);
+                Drawable drawableDecoration = rs.getDrawable(R.mipmap.foot_decoration_pressed);
+                decoration_text.setCompoundDrawablesRelativeWithIntrinsicBounds(null, drawableDecoration, null, null);
+                switchFragment("decorationFragment");
                 break;
             case R.id.tool_text:
                 tool_text.setTextColor(menuTextBgCurrentColor);

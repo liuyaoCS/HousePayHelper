@@ -15,5 +15,11 @@
         android:id="@+id/creditLoan"
         android:layout_below="@id/house"
         />
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的"
+        android:id="@+id/my"
+        android:layout_below="@id/creditLoan"
+        />
 
 </RelativeLayout>
